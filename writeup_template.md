@@ -30,7 +30,7 @@ You're reading it! Below I describe how I addressed each rubric point and where 
 These scripts contain a basic planning implementation that includes a basic A* algorithm, only authorizing 4 actions (Up Down Left Right) which is not realistic.
 
 And here's a lovely image of my results (ok this image has nothing to do with it, but it's a nice example of how to include images in your writeup!)
-![Top Down View](./misc/path_planning.gif)
+![Top Down View](./misc/simple_case.gif)
 
 Here's | A | Snappy | Table
 --- | --- | --- | ---
