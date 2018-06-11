@@ -73,7 +73,6 @@ current_lcl_pos = global_to_local(current_glbl_pos, self.global_home)
 #### 3. Set grid start position from local position
 
 ``
-grid_start = (-north_offset, -east_offset)
 grid_start = (int(current_lcl_pos[0]), int(current_lcl_pos[1]))
 ``
 
