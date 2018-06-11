@@ -178,23 +178,26 @@ class MotionPlanning(Drone):
         print('graph took {0} seconds to build'.format(time.time() - t0))
 
         start = list(graph.nodes)[0]
-        k = np.random.randint(len(graph.nodes))
-        print(k, len(graph.nodes))
-        goal = list(graph.nodes)[k]
 
-        # goal = (709.6953556162655, 480.1928341700754, 18.724961802433807)
+        len_path = 0
+        while len_path == 0:
+            k = np.random.randint(len(graph.nodes))
+            print(k, len(graph.nodes))
+            goal = list(graph.nodes)[k]
 
-        print("start,goal", start, goal)
+            # goal = (709.6953556162655, 480.1928341700754, 18.724961802433807)
 
-        # print("grid_start, grid_goal", grid_start, grid_goal)
-        
-        # plt.imshow(grid, cmap='Greys', origin='lower')
-        # plt.plot(grid_start[1], grid_start[0], 'x')
-        # plt.plot(grid_goal[1], grid_goal[0], 'x')
-        # plt.show()
+            print("start,goal", start, goal)
 
-        path, _ = a_star(graph, heuristic, start, goal)
-        print(len(path))
+            # print("grid_start, grid_goal", grid_start, grid_goal)
+            
+            # plt.imshow(grid, cmap='Greys', origin='lower')
+            # plt.plot(grid_start[1], grid_start[0], 'x')
+            # plt.plot(grid_goal[1], grid_goal[0], 'x')
+            # plt.show()
+
+            path, _ = a_star(graph, heuristic, start, goal)
+            len_path = len(path)
         pruned_path = prune_path(path, polygons)
 
         # plt.imshow(grid, cmap='Greys', origin='lower')
