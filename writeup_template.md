@@ -73,9 +73,7 @@ current_lcl_pos = global_to_local(current_glbl_pos, self.global_home)
 #### 3. Set grid start position from local position
 
 ``
-# Define starting point on the grid (this is just grid center)
 grid_start = (-north_offset, -east_offset)
-# TODO: convert start position to current position rather than map center
 grid_start = (int(current_lcl_pos[0]), int(current_lcl_pos[1]))
 ``
 
