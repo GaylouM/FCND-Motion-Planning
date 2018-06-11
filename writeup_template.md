@@ -30,7 +30,7 @@ You're reading it! Below I describe how I addressed each rubric point and where 
 These scripts contain a basic planning implementation that includes...
 
 And here's a lovely image of my results (ok this image has nothing to do with it, but it's a nice example of how to include images in your writeup!)
-![Top Down View](./misc/high_up.png)
+![Top Down View](./misc/path_planning.gif)
 
 Here's | A | Snappy | Table
 --- | --- | --- | ---
